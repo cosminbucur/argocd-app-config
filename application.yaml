@@ -2,23 +2,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: gitops-server-argo-application
   namespace: argocd
 spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
+    repoURL: https://gitlab.com/freeminions/argocd-app-config.git
     targetRevision: HEAD
     path: dev
   destination: 
+    # local minikube
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: gitops-server
 
   syncPolicy:
     syncOptions:
+    # create the namespace if it doesn't exist
     - CreateNamespace=true
 
     automated:
+      # auto sync with git repository 
       selfHeal: true
       prune: true
