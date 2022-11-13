@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: gitops-server
-        image: gitops-server:latest
+        image: cosminbucur/gitops-server:latest
         ports:
         - containerPort: 8081
         resources:
