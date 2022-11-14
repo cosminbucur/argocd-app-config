@@ -8,7 +8,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/freeminions/argocd-app-config.git
+    repoURL: https://github.com/cosminbucur/argocd-app-config
     targetRevision: HEAD
     path: argocd/apps/gitops-server
   destination: 
