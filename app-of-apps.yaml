@@ -8,7 +8,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: argocd/argocd-apps
-    repoURL: 'https://gitlab.com/freeminions/argocd-app-config.git'
+    repoURL: 'https://github.com/cosminbucur/argocd-app-config'
     targetRevision: HEAD
 
   project: default
