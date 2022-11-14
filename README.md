@@ -16,3 +16,9 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ```
 </br>
+
+[gitlab repo](https://gitlab.com/freeminions/gitops-server)
+
+[dockerhub repo](https://hub.docker.com/repository/docker/cosminbucur/gitops-server)
+
+[gitops repository for argo](https://gitlab.com/freeminions/argocd-app-config)

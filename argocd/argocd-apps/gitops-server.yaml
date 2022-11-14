@@ -1,8 +1,8 @@
-# argocd app configuration
+# argocd app configuration (k8 manifest file)
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitops-server-argo-application
+  name: gitops-server
   namespace: argocd
 spec:
   project: default
@@ -10,11 +10,11 @@ spec:
   source:
     repoURL: https://gitlab.com/freeminions/argocd-app-config.git
     targetRevision: HEAD
-    path: dev
+    path: argocd/apps/gitops-server
   destination: 
     # local minikube
     server: https://kubernetes.default.svc
-    namespace: gitops-server
+    namespace: demo
 
   syncPolicy:
     syncOptions:
